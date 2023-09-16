@@ -1,11 +1,5 @@
 import { NumbersCollection } from "./NumbersCollection";
 
-interface Sortable {
-  length: number;
-  compare(index: number): boolean;
-  swap(index: number): void;
-}
-
 export abstract class Sorter {
   abstract compare(inde: number): boolean;
   abstract swap(index: number): void;
