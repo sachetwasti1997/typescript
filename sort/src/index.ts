@@ -9,7 +9,7 @@ import { Sorter } from "./Sorter";
 
 // logSomething('Sachet');
 
-const cl = new Sorter(new NumbersCollection([3, 2, -1, 0]));
+const cl = new Sorter(new NumbersCollection([-4, 2, -1, 0]));
 cl.sort();
 console.log(cl.collection);
 
