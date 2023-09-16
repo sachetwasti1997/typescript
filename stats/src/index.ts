@@ -2,12 +2,13 @@ import { CsvFileReader } from './CsvFileReader';
 import { MatchReader } from './MatchReader';
 import { MatchResult } from './MathResults';
 
-const reader = new MatchReader('football.csv');
-reader.read();
+const csvFileReader = new CsvFileReader('football.csv')
+const reader = new MatchReader(csvFileReader);
+reader.load();
 
 let manUnitedWin = 0;
 
-reader.data
+reader.matches
   .filter((cellMatch) => {
     return (
       (cellMatch[1] === 'Man United' && cellMatch[5] === MatchResult.HomeWin) ||
