@@ -13,7 +13,7 @@ export class Sorter {
     const { length } = this.collection;
 
     for (let index = 0; index < length; index++) {
-      for (let j = 0; j < length - index; j++) {
+      for (let j = 0; j < length - index - 1; j++) {
         if (this.collection.compare(j)) {
           this.collection.swap(j);
         }
